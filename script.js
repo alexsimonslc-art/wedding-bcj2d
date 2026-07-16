@@ -12,6 +12,71 @@
     a.addEventListener('click',function(){var n=a.closest('[data-nav]');if(n)n.classList.remove('open');});
   });
 
+  // Floating animated hearts canvas background
+  var canvas = document.getElementById('heartsCanvas');
+  if (canvas) {
+    var ctx = canvas.getContext('2d');
+    var hearts = [];
+    
+    function resize() {
+      canvas.width = canvas.parentElement.offsetWidth;
+      canvas.height = canvas.parentElement.offsetHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    function createHeart() {
+      return {
+        x: Math.random() * canvas.width,
+        y: canvas.height + 20,
+        size: Math.random() * 15 + 8,
+        speed: Math.random() * 1.5 + 0.6,
+        opacity: Math.random() * 0.5 + 0.2,
+        wobble: Math.random() * 2,
+        wobbleSpeed: Math.random() * 0.02 + 0.01
+      };
+    }
+
+    function drawHeart(ctx, x, y, size) {
+      ctx.beginPath();
+      ctx.moveTo(x, y + size / 4);
+      ctx.quadraticCurveTo(x, y, x + size / 2, y);
+      ctx.quadraticCurveTo(x + size, y, x + size, y + size / 3);
+      ctx.quadraticCurveTo(x + size, y + (size * 2) / 3, x + size / 2, y + size);
+      ctx.quadraticCurveTo(x, y + (size * 2) / 3, x, y + size / 3);
+      ctx.quadraticCurveTo(x, y, x, y + size / 4);
+      ctx.closePath();
+      ctx.fill();
+    }
+
+    for (var i = 0; i < 25; i++) {
+      hearts.push(createHeart());
+      hearts[i].y = Math.random() * canvas.height;
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'rgba(255, 77, 121, 0.4)';
+      
+      for (var i = 0; i < hearts.length; i++) {
+        var h = hearts[i];
+        h.y -= h.speed;
+        h.wobble += h.wobbleSpeed;
+        var wobbleX = h.x + Math.sin(h.wobble) * 20;
+        
+        ctx.globalAlpha = h.opacity;
+        drawHeart(ctx, wobbleX, h.y, h.size);
+        
+        if (h.y < -30) {
+          hearts[i] = createHeart();
+        }
+      }
+      ctx.globalAlpha = 1.0;
+      requestAnimationFrame(animate);
+    }
+    animate();
+  }
+
   // countdowns
   document.querySelectorAll('[data-countdown]').forEach(function(cd){
     var target=new Date(cd.getAttribute('data-countdown')).getTime();
