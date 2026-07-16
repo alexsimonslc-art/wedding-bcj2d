@@ -1,9 +1,101 @@
 {
-  "name": "Wedding",
-  "slug": "wedding-bcj2d",
-  "template": "blank",
-  "pages": [
-    "index"
-  ],
-  "version": 1
+  "generator": "ui-library",
+  "version": 1,
+  "style": "glass",
+  "palette": "aurora-night",
+  "fonts": "cookie+jakarta",
+  "spec": {
+    "style": "glass",
+    "palette": "aurora-night",
+    "fonts": "cookie+jakarta",
+    "event": {
+      "name": "The Wedding of Julian & Samantha"
+    },
+    "pages": [
+      {
+        "name": "index",
+        "title": "Home",
+        "sections": [
+          {
+            "type": "hero",
+            "content": {
+              "badge": "September 12, 2026 • Napa Valley, CA",
+              "headline": "Julian & Samantha",
+              "sub": "We can't wait to celebrate the beginning of our forever with you.",
+              "ctaText": "RSVP Now",
+              "ctaHref": "pages/rsvp.html"
+            }
+          },
+          {
+            "type": "countdown",
+            "content": {
+              "title": "Counting down the days",
+              "date": "2026-09-12T16:00:00"
+            }
+          },
+          {
+            "type": "about",
+            "content": {
+              "title": "Our Love Story",
+              "text": "From a chance meeting in a cozy Seattle coffee shop to a rainy proposal on the cliffs of Big Sur, our journey together has been filled with laughter, adventure, and endless love. We are so excited to write this next chapter in front of our dearest family and friends."
+            }
+          },
+          {
+            "type": "schedule",
+            "content": {
+              "title": "The Big Day",
+              "items": [
+                {
+                  "time": "4:00 PM",
+                  "title": "The Ceremony",
+                  "desc": "An intimate exchange of vows at the Meadow Pavilion."
+                },
+                {
+                  "time": "5:00 PM",
+                  "title": "Cocktail Hour",
+                  "desc": "Drinks, hors d'oeuvres, and live acoustic music on the terrace."
+                },
+                {
+                  "time": "6:30 PM",
+                  "title": "Dinner & Dancing",
+                  "desc": "A seasonal multi-course feast followed by celebration in the main hall."
+                }
+              ]
+            }
+          },
+          {
+            "type": "cta",
+            "content": {
+              "title": "Will You Join Us?",
+              "sub": "Please let us know your plans by June 1st so we can finalize our arrangements.",
+              "ctaText": "RSVP Online",
+              "ctaHref": "pages/rsvp.html"
+            }
+          }
+        ]
+      },
+      {
+        "name": "rsvp",
+        "title": "RSVP",
+        "sections": [
+          {
+            "type": "hero",
+            "content": {
+              "badge": "RSVP",
+              "headline": "Kindly Respond",
+              "sub": "Please fill out the form below to confirm your attendance and meal preferences.",
+              "ctaText": "Back to Home",
+              "ctaHref": "index.html"
+            }
+          },
+          {
+            "type": "form",
+            "content": {
+              "title": "Wedding Attendance Form"
+            }
+          }
+        ]
+      }
+    ]
+  }
 }

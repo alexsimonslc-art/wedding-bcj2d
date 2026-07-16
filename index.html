@@ -3,16 +3,79 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Wedding</title>
+<title>Home</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cookie&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<main class="wrap">
-  <h1>Wedding</h1>
-  <p class="lead">Your new site is ready. Start editing to make it yours.</p>
+<header class="nav" data-nav>
+  <a class="nav-brand" href="index.html">The Wedding of Julian &amp; Samantha</a>
+  <nav class="nav-links"><a href="index.html">Home</a><a href="pages/rsvp.html">RSVP</a></nav>
+  <button class="nav-burger" aria-label="Menu" data-burger><span></span><span></span><span></span></button>
+</header>
+<main>
+<section class="hero" data-hero>
+  <div class="hero-bg" data-bg></div>
+  <div class="hero-inner">
+    <span class="hero-badge reveal">September 12, 2026 • Napa Valley, CA</span>
+    <h1 class="hero-title reveal">Julian &amp; Samantha</h1>
+    <p class="hero-sub reveal">We can&#39;t wait to celebrate the beginning of our forever with you.</p>
+    <a class="btn btn-lg reveal" href="pages/rsvp.html">RSVP Now</a>
+  </div>
+</section>
+<section class="section countdown-section" id="countdown">
+  <div class="section-inner">
+    <h2 class="section-title reveal">Counting down the days</h2>
+    <div class="countdown reveal" data-countdown="2026-09-12T16:00:00">
+      <div class="cd-unit"><span data-cd="days">00</span><small>Days</small></div>
+      <div class="cd-unit"><span data-cd="hours">00</span><small>Hours</small></div>
+      <div class="cd-unit"><span data-cd="mins">00</span><small>Minutes</small></div>
+      <div class="cd-unit"><span data-cd="secs">00</span><small>Seconds</small></div>
+    </div>
+  </div>
+</section>
+<section class="section" id="about">
+  <div class="section-inner">
+    <h2 class="section-title reveal">Our Love Story</h2>
+    <p class="section-lead reveal"></p>
+  </div>
+</section>
+<section class="section" id="schedule">
+  <div class="section-inner">
+    <h2 class="section-title reveal">The Big Day</h2>
+    <div class="schedule">
+    <div class="sched-item reveal">
+      <div class="sched-time">4:00 PM</div>
+      <div class="sched-body"><div class="sched-title">The Ceremony</div><div class="sched-desc">An intimate exchange of vows at the Meadow Pavilion.</div></div>
+    </div>
+    <div class="sched-item reveal">
+      <div class="sched-time">5:00 PM</div>
+      <div class="sched-body"><div class="sched-title">Cocktail Hour</div><div class="sched-desc">Drinks, hors d&#39;oeuvres, and live acoustic music on the terrace.</div></div>
+    </div>
+    <div class="sched-item reveal">
+      <div class="sched-time">6:30 PM</div>
+      <div class="sched-body"><div class="sched-title">Dinner &amp; Dancing</div><div class="sched-desc">A seasonal multi-course feast followed by celebration in the main hall.</div></div>
+    </div></div>
+  </div>
+</section>
+<section class="section cta" id="register">
+  <div class="section-inner cta-inner reveal">
+    <h2 class="cta-title">Will You Join Us?</h2>
+    <p class="cta-sub">Please let us know your plans by June 1st so we can finalize our arrangements.</p>
+    <a class="btn btn-lg" href="pages/rsvp.html">RSVP Online</a>
+  </div>
+</section>
 </main>
-<footer>Made with GalSol</footer>
+<footer class="footer reveal">
+  <div class="footer-inner">
+    <div class="footer-brand">The Wedding of Julian &amp; Samantha</div>
+    <nav class="footer-links"><a href="index.html">Home</a><a href="pages/rsvp.html">RSVP</a></nav>
+    <div class="footer-copy">© 2026 The Wedding of Julian &amp; Samantha. Made with GalSol.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
