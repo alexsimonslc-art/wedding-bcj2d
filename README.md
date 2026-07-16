@@ -1,2 +1,3 @@
-# wedding-bcj2d
-Wedding — built with GalSol
+# Wedding
+
+Built with GalSol Ultimate Websites.

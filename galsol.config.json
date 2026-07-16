@@ -1,0 +1,9 @@
+{
+  "name": "Wedding",
+  "slug": "wedding-bcj2d",
+  "template": "blank",
+  "pages": [
+    "index"
+  ],
+  "version": 1
+}
